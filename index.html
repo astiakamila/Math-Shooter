@@ -1,0 +1,359 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Math Shooter</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+/* ================= HERO ================= */
+
+header{
+    min-height:100vh;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+}
+
+.hero{
+    max-width:850px;
+}
+
+.hero h1{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    line-height:1.8;
+    opacity:.95;
+}
+
+.buttons{
+    margin-top:40px;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    padding:15px 30px;
+    margin:10px;
+    border-radius:12px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.primary{
+    background:#22c55e;
+}
+
+.primary:hover{
+    background:#16a34a;
+    transform:translateY(-3px);
+}
+
+.secondary{
+    border:2px solid white;
+}
+
+.secondary:hover{
+    background:white;
+    color:#111827;
+    transform:translateY(-3px);
+}
+
+/* ================= CONTENT ================= */
+
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 25px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:50px;
+}
+
+/* ================= GRID ================= */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#1e293b;
+    border-radius:18px;
+    padding:20px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    margin-bottom:15px;
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    border-radius:12px;
+}
+
+/* ================= FEATURES ================= */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+}
+
+.feature{
+    background:#1e293b;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+}
+
+.feature h3{
+    margin-bottom:15px;
+}
+
+.feature p{
+    color:#cbd5e1;
+    line-height:1.6;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#111827;
+    text-align:center;
+    padding:35px;
+    color:#94a3b8;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:48px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.section-title{
+    font-size:30px;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="hero">
+
+<h1>🎮 Math Shooter</h1>
+
+<p>
+An educational arcade game built with <b>Python</b> and <b>Pygame</b> where players solve randomly generated math problems by catching the correct falling answers. Developed as a university course project and enhanced as part of my programming portfolio.
+</p>
+
+<div class="buttons">
+
+<a class="btn primary"
+href="https://github.com/astiakamila/Math-Shooter"
+target="_blank">
+View Source Code
+</a>
+
+<a class="btn secondary"
+href="https://github.com/astiakamila/Math-Shooter/archive/refs/heads/main.zip">
+Download ZIP
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ================= GAMEPLAY ================= -->
+
+<section>
+
+<h2 class="section-title">
+🎮 Gameplay Preview
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>✈️ Plane Gameplay</h3>
+
+<img src="plane-gameplay.gif" alt="Plane Gameplay">
+
+</div>
+
+<div class="card">
+
+<h3>🦋 Butterfly Gameplay</h3>
+
+<img src="butterfly-gameplay.gif" alt="Butterfly Gameplay">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section>
+
+<h2 class="section-title">
+✨ Features
+</h2>
+
+<div class="features">
+
+<div class="feature">
+<h3>🧮 Random Math Problems</h3>
+<p>
+Solve randomly generated addition, subtraction, multiplication, and division problems.
+</p>
+</div>
+
+<div class="feature">
+<h3>🎯 Three Difficulty Levels</h3>
+<p>
+Choose between Easy, Medium, and Hard according to your skill level.
+</p>
+</div>
+
+<div class="feature">
+<h3>🚀 Character Selection</h3>
+<p>
+Play using either the Plane or Butterfly character before starting the game.
+</p>
+</div>
+
+<div class="feature">
+<h3>👤 Player Name</h3>
+<p>
+Enter your own name before the game begins for a more personalized experience.
+</p>
+</div>
+
+<div class="feature">
+<h3>🏆 Score & Lives</h3>
+<p>
+Earn points for correct answers while managing your remaining lives.
+</p>
+</div>
+
+<div class="feature">
+<h3>⚡ Dynamic Gameplay</h3>
+<p>
+The falling speed increases as your score grows, making the game more challenging.
+</p>
+</div>
+
+<div class="feature">
+<h3>🌸 Animated Backgrounds</h3>
+<p>
+Enjoy animated backgrounds that make the gameplay more visually engaging.
+</p>
+</div>
+
+<div class="feature">
+<h3>🎵 Music & Sound Effects</h3>
+<p>
+Background music and sound effects provide a more immersive gameplay experience.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= TECH STACK ================= -->
+
+<section>
+
+<h2 class="section-title">
+💻 Tech Stack
+</h2>
+
+<div class="features">
+
+<div class="feature">
+<h3>🐍 Python</h3>
+<p>Main programming language used to build the game.</p>
+</div>
+
+<div class="feature">
+<h3>🎮 Pygame</h3>
+<p>Framework used for graphics, audio, events, and game mechanics.</p>
+</div>
+
+<div class="feature">
+<h3>🧩 Object-Oriented Programming</h3>
+<p>The game is developed using classes and reusable object-oriented components.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p><strong>Math Shooter</strong></p>
+
+<p>
+Built with ❤️ using Python & Pygame
+</p>
+
+<p style="margin-top:10px;">
+© 2026 Astia Kamila D.S.
+</p>
+
+</footer>
+
+</body>
+</html>
+```
